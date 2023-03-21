@@ -28,14 +28,21 @@ internal class Program
 
         t1 = "a";
         Console.WriteLine(bool.ReferenceEquals(t1, s1)); // false
-        
-      
+
+        // 'new'lenmiş string referans adresi değişir
         string s2 = "asd";
         string t2 = new string("asd");
 
         Console.WriteLine(s2 == t2); // true bool.Equals(s2,t2)   string.operator
         Console.WriteLine(bool.ReferenceEquals(s2,t2)); // false    
-         
+
+
+        //   değerleri aynı 'new'lenmemiş 2 string aynı referansı gösterir
+        string s3 = "asd";
+        string t3 = "asd";
+        
+        Console.WriteLine(s3 == t3); // bool.Equasl(s3,t3) => True
+        Console.WriteLine(bool.ReferenceEquals(s3, t3)); // true  
 
         //-----------------------------------------------------------------------------------------------
         object x = 15;
