@@ -13,7 +13,8 @@
         object t1 = "asd";
         Console.WriteLine(s1 == t1); // bool.Equals(s1,t1) true
         Console.WriteLine(bool.ReferenceEquals(t1,s1)); // true
-        
+        t1 = "a";
+        Console.WriteLine(bool.ReferenceEquals(t1, s1)); // false
 
         
 
