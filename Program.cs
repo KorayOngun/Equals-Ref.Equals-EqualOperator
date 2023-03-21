@@ -13,8 +13,8 @@ internal class Program
         object s = "asd";
         object t = new string("asd");
         
-        Console.WriteLine($"object  s == t  {s == t}"); // object.operator,  bool.ReferenceEquals(s,t)  => false
-        Console.WriteLine($"object  (string)s==(string)t  {(string)s == (string)t}"); // string.operator =>  bool.Equals(s,t)  true
+        Console.WriteLine(s == t); // object.operator,  bool.ReferenceEquals(s,t)  => false
+        Console.WriteLine((string)s == (string)t); // string.operator =>  bool.Equals(s,t)  true
 
 
 
@@ -22,7 +22,7 @@ internal class Program
         object s1 = "asd";
         object t1 = "asd";
 
-        Console.WriteLine( $"object  s1 == t1 {s1 == t1}"); // bool.ReferenceEquals(s1,t1) true
+        Console.WriteLine(s1 == t1}); // bool.ReferenceEquals(s1,t1) true
         Console.WriteLine(bool.ReferenceEquals(t1,s1)); // true
 
 
