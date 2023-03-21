@@ -6,8 +6,8 @@ internal class Program
 {
     private unsafe static void Main(string[] args)
     {
-        //   object, reference tip   '==' operatörü => bool.ReferenceEquals() referans karşılaştırma
-        //   primitive, string tip  '==' operatörü => bool.Equals() içerik karşılaştırma
+        //   reference tip   '==' operatörü => bool.ReferenceEquals() referans karşılaştırma
+        //   value, string tip  '==' operatörü => bool.Equals() içerik karşılaştırma
         
         // 'new'lenmiş string referans adresi değişir
         object s = "asd";
