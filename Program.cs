@@ -13,17 +13,18 @@ internal class Program
         object s = "asd";
         object t = new string("asd");
         
-        Console.WriteLine(s == t); // bool.ReferenceEquals(s,t)  || bool.ReferenceEquasl((string)s,string(t)) => false
-        Console.WriteLine((string)s == (string)t); // bool.Equals(s,t)  true
+        Console.WriteLine($"object  s == t  {s == t}"); // object.operator,  bool.ReferenceEquals(s,t)  => false
+        Console.WriteLine($"object  (string)s==(string)t  {(string)s == (string)t}"); // string.operator =>  bool.Equals(s,t)  true
+
 
 
         //   değerleri aynı 'new'lenmemiş 2 string aynı referansı gösterir
         object s1 = "asd";
         object t1 = "asd";
 
-        Console.WriteLine(s1 == t1); // true
+        Console.WriteLine( $"object  s1 == t1 {s1 == t1}"); // bool.ReferenceEquals(s1,t1) true
         Console.WriteLine(bool.ReferenceEquals(t1,s1)); // true
-        string.Equals(s1,t1);
+
 
         t1 = "a";
         Console.WriteLine(bool.ReferenceEquals(t1, s1)); // false
@@ -32,7 +33,7 @@ internal class Program
         string s2 = "asd";
         string t2 = new string("asd");
 
-        Console.WriteLine(s2 == t2); // true   
+        Console.WriteLine(s2 == t2); // true bool.Equals(s2,t2)   string.operator
         Console.WriteLine(bool.ReferenceEquals(s2,t2)); // false    
          
 
@@ -48,6 +49,7 @@ internal class Program
         Console.WriteLine(i==j); //  bool.Eqauls(i,j) -- true
         Console.WriteLine( (object)i == (object)j); // bool.ReferenceEquals(i,j) -- false
         Console.WriteLine(bool.Equals(i,j)); // true
+
 
     }
 }
