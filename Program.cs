@@ -9,7 +9,7 @@ internal class Program
         //   reference tip   '==' operatörü => bool.ReferenceEquals() referans karşılaştırma
         //   value, string tip  '==' operatörü => bool.Equals() içerik karşılaştırma
         
-        // 'new'lenmiş string referans adresi değişir
+        // 'new'lenmiş string referansı farklı
         object s = "asd";
         object t = new string("asd");
         
@@ -18,7 +18,7 @@ internal class Program
 
 
 
-        //   değerleri aynı 'new'lenmemiş 2 string aynı referansı gösterir
+        //   değerleri aynı 'new'lenmemiş 2 string aynı referans
         object s1 = "asd";
         object t1 = "asd";
 
@@ -29,7 +29,7 @@ internal class Program
         t1 = "a";
         Console.WriteLine(bool.ReferenceEquals(t1, s1)); // false
 
-        // 'new'lenmiş string referans adresi değişir
+        // 'new'lenmiş string referansı farklı
         string s2 = "asd";
         string t2 = new string("asd");
 
@@ -37,7 +37,7 @@ internal class Program
         Console.WriteLine(bool.ReferenceEquals(s2,t2)); // false    
 
 
-        //   değerleri aynı 'new'lenmemiş 2 string aynı referansı gösterir
+        //   değerleri aynı 'new'lenmemiş 2 string aynı referans
         string s3 = "asd";
         string t3 = "asd";
         
